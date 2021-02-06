@@ -8,11 +8,11 @@ const Committee = () => {
     const a = [1, 1, 1, 1]
     return (
         <>
-            <Subheader />
+            <Subheader title='COMMITTEE' />
             <section className='container mt-5 administration'>
                 <div className="row">
                     <Categories />
-                    <div className="col-9 pr-0">
+                    <div className="col-md-9 col-12 pr-md-0 mt-5 mt-md-0">
                         <h2 style={{ fontWeight: '600' }}>Committee</h2>
                         <p className='mt-5 title'>Chairman</p>
                         <p>Md. Someone</p>

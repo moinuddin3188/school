@@ -12,7 +12,7 @@ const ChoseLink = () => {
             <div className="row">
                 {
                     a.map(a =>
-                        <div className="col-4 px-4">
+                        <div className="col-lg-4 col-md-6 col-12 mb-5 mb-lg-0 px-4">
                             <div className="chose-link-card text-center">
                                 <img src={img} alt="" />
                                 <h5 className="mt-4"> {a.title} </h5>

@@ -1,13 +1,17 @@
 import React from 'react';
+import { fakeData } from '../../../FakeData/FakeData';
 import Footer from '../../Home/Footer/Footer';
 import Subheader from '../../Subheader/Subheader';
 import Menu from '../Menu/Menu';
 
 const Students = () => {
     const a = [1, 1, 1, 1, 1, 1, 1, 1];
+    const number = max => {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
     return (
         <>
-            <Subheader />
+            <Subheader title='STUDENTS' />
             <section className='container mt-5 academic'>
                 <div className="row">
                     <Menu />
@@ -30,15 +34,15 @@ const Students = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        a.map((a, index) =>
+                                        fakeData.map((a, index) =>
                                             <tr>
                                                 <td>{index + 1}</td>
                                                 <td>
-                                                    <img width='80px' src="https://duap.du.ac.bd/upload/img/arb_jmizandu.jpg" alt="" />
+                                                    <img width='80px' src={a.node.searchable.profile_picture.uri} alt="" />
                                                 </td>
-                                                <td>Md. Moin uddin</td>
-                                                <td>2</td>
-                                                <td>2</td>
+                                                <td>{a.node.searchable.name}</td>
+                                                <td>{number(60)}</td>
+                                                <td>{number(60)}</td>
                                                 <td>+088170000000</td>
                                                 <td>Jagannathpur, Debidwar, Cumilla</td>
                                             </tr>

@@ -6,11 +6,11 @@ import Menu from '../Menu/Menu';
 const Books = () => {
     return (
         <>
-            <Subheader />
+            <Subheader title="BOOKS" />
             <section className='container mt-5 academic'>
                 <div className="row">
                     <Menu />
-                    <div className="col-9 pr-0">
+                    <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0">
                         <div className="table-responsive book">
                             <div className="menu-title">
                                 <p>Books</p>

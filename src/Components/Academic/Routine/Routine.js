@@ -7,11 +7,11 @@ const Routine = () => {
     const a = [1, 1, 1, 1, 1, 1];
     return (
         <>
-            <Subheader />
+            <Subheader title='ROUTINE' />
             <section className='container mt-5 academic'>
                 <div className="row">
                     <Menu />
-                    <div className="col-9">
+                    <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0">
                         <div className="menu-title mb-1">
                             <p>Class Routine</p>
                         </div>

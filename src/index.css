@@ -17,3 +17,13 @@ code {
   background-color: #ff4086;
   color: #fff;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff4086;
+  border-radius: 3px;
+}

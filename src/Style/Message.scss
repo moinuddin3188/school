@@ -5,4 +5,14 @@
         text-align: justify;
         color: #54626d;
     }
+
+    img {
+        width: 305px;
+    }
+
+    @media (min-width: 768px) {
+        img {
+            width: 100%;
+        }
+    }
 }

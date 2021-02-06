@@ -5,7 +5,7 @@ import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 const EventCard = () => {
     const a = [1, 1, 1, 1]
     return (
-        <div className='col-4'>
+        <div className='col-md-4 col-12 mb-md-0 mb-4'>
             <div className="event-card">
                 <div className="cardHeader">
                     <p>
@@ -19,7 +19,7 @@ const EventCard = () => {
                             <div className='p-2 sub-card'>
                                 <p className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptatem......</p>
                                 <small>13 feb 2021</small>
-                                <p className='text-danger'>Read more...</p>
+                                <p className='text-danger'><span className='show-details'>Read more...</span></p>
                             </div>
                         )
                     }

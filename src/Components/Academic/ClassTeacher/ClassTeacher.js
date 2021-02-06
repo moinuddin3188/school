@@ -6,11 +6,11 @@ import Menu from '../Menu/Menu';
 const ClassTeacher = () => {
     return (
         <>
-            <Subheader />
+            <Subheader title="CLASS TEACHER" />
             <section className='container mt-5 academic'>
                 <div className="row">
                     <Menu />
-                    <div className="col-9 pr-0">
+                    <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0 class-teacher">
                         <img width='200px' src="https://www.cuet.ac.bd/frontend/images/vcsir.jpg" alt=""/>
                         <h5>Md. Someone</h5>
                         <p>Assistant Teacher</p>

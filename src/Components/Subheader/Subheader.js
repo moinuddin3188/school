@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../Style/Subheader.scss';
 
-const Subheader = () => {
+const Subheader = ({title}) => {
     return (
         <section className="subheader d-flex justify-content-center align-items-center">
             <div className="text-center">
-                <h1>ABOUT US</h1>
+                <h1>{title}</h1>
             </div>
         </section>
     );

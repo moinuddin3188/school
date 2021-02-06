@@ -9,30 +9,30 @@ import Menu from '../Menu/Menu';
 const ClassContact = () => {
     return (
         <>
-            <Subheader />
+            <Subheader title="CONTACT" />
             <section className='container mt-5 academic'>
                 <div className="row">
                     <Menu />
-                    <div className="col-9 pr-0">
+                    <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0">
                         <div className="menu-title mb-4">
                             <p>Contact</p>
                         </div>
-                        <div className="row contact">
-                            <div className="col-4 text-center">
+                        <div className="row contact justify-content-center">
+                            <div className="col-lg-4 col-md-6 col-10 mb-4 mb-lg-0 text-center">
                                 <div className="p-4 contact-info rounded">
                                     <FontAwesomeIcon className='icon' icon={faMapMarkerAlt} />
                                     <p className='my-3'>Come to</p>
                                     <p>Sultanpur, Debidwar, Cumilla</p>
                                 </div>
                             </div>
-                            <div className="col-4 text-center">
+                            <div className="col-lg-4 col-md-6 col-10 mb-4 mb-lg-0 text-center">
                                 <div className="p-4 contact-info rounded">
                                     <FontAwesomeIcon className='icon' icon={faPhoneAlt} />
                                     <p className='my-3'>Call to</p>
                                     <p>+88017000000</p>
                                 </div>
                             </div>
-                            <div className="col-4 text-center">
+                            <div className="col-lg-4 col-md-6 col-10 mb-4 mb-lg-0 text-center">
                                 <div className="p-4 contact-info rounded">
                                     <FontAwesomeIcon className='icon' icon={faEnvelope} />
                                     <p className='my-3'>Connect</p>

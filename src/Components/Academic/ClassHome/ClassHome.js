@@ -8,12 +8,12 @@ import img from '../../../Images/class.png'
 const ClassHome = () => {
     return (
         <>
-            <Subheader />
+            <Subheader title="CLASS 9" />
             <section className='container mt-5 academic'>
                 <div className="row">
                     <Menu />
-                    <div className="col-9">
-                        <img width='70%' src={img} alt=""/>
+                    <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0 class-room">
+                        <img src={img} alt=""/>
                         <p className='mt-5 description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum iste voluptate sed. Harum quos unde nam error! Molestias, odio esse. Dicta tempore delectus natus excepturi quam reiciendis soluta ipsam assumenda voluptates dolor at error, quasi iure veritatis, provident blanditiis totam fugit! Odit quasi facere dolores ad accusantium odio perspiciatis nesciunt architecto expedita, cum enim dolor fugiat itaque molestias repellendus distinctio.</p>
                         <p className='mt-4 description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum iste voluptate sed. Harum quos unde nam error! Molestias, odio esse. Dicta tempore delectus natus excepturi quam reiciendis soluta ipsam assumenda voluptates dolor at error, quasi iure veritatis, provident blanditiis totam fugit! Odit quasi facere dolores ad accusantium odio perspiciatis nesciunt architecto expedita, cum enim dolor fugiat itaque molestias repellendus distinctio.</p>
                         <h5 className='mt-5'>Contact</h5>

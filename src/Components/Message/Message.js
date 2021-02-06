@@ -7,15 +7,15 @@ const Message = () => {
     const a = [1,1,1,1];
     return (
         <>
-            <Subheader />
+            <Subheader title='MESSAGE' />
             <section className="message container mt-5">
                 <div className="row">
-                    <div className="col-3 pl-0">
-                        <img width='100%'src="https://www.cuet.ac.bd/frontend/images/vcsir.jpg" alt=""/>
+                    <div className="col-md-3 col-12 pl-md-0">
+                        <img src="https://www.cuet.ac.bd/frontend/images/vcsir.jpg" alt=""/>
                         <h6>Md. Kabir Ahmed</h6>
                         <h5>Principal</h5>
                     </div>
-                    <div className="col-9 pr-0">
+                    <div className="col-md-9 col-12 pr-md-0 mt-5 mt-md-0">
                         <h2>
                             <span style={{fontWeight: "300"}}>Message from </span>
                             <span style={{fontWeight: "600"}}>Principal</span>

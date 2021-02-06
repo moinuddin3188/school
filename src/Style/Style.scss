@@ -29,10 +29,37 @@ p {
     color: #fff;
     padding: 0 1rem 0 6rem;
 
+    @media (max-width: 992px) {
+        padding: 0 15px;
+    }
+
+    img {
+        width: 88px;
+    }
+
+    @media (max-width: 576px) {
+        img {
+            width: 65px;
+        }
+    }
+
     h1 {
         font-family: 'Poppins' , sans-serif !important;
         font-weight: 600;
         letter-spacing: 1px;
+        padding-top: 5px;
+    }
+
+    @media (max-width: 992px) {
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        h1 {
+            font-size: 20px;
+        }
     }
 
     .nav-link {
@@ -46,33 +73,13 @@ p {
         color: #000 !important;
     }
 
+    .dropdown-item {
+        font-size: 14px;
+        padding: 0.70rem 1.5rem;
+    }
+
     .dropdown-menu {
         border-top: 8px solid $primary-color !important;
-    }
-
-    .about-us-dropdown:hover .about-us-dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-
-    .academic-dropdown:hover .academic-dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-
-    .dakhil-dropdown:hover .dakhil-dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-
-    .class9-dropdown:hover .class9-dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-
-    .class8-dropdown:hover .class8-dropdown-menu {
-        display: block;
-        margin-top: 0;
     }
 }
 
@@ -108,6 +115,10 @@ marquee {
 
         small {
             font-size: 12px;
+        }
+
+        .show-details {
+            cursor: pointer;
         }
     }
 
@@ -288,10 +299,4 @@ marquee {
     bottom: 30px;
     right: 30px;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .navbar-container {
-        padding-left: 5px;
-    }
 }

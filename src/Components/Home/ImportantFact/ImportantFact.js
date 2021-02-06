@@ -14,7 +14,7 @@ const ImportantFact = () => {
                 <div className="row">
                     {
                         a.map(a =>
-                            <div className="col-3 text-center text-white fact-card">
+                            <div className="col-md-3 col-6 mb-md-0 mb-4 text-center text-white fact-card">
                                 <h1> {a.count} </h1>
                                 <p> {a.title} </p>
                                 <button className="button px-4 mt-3">DETAILS</button>

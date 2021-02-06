@@ -7,13 +7,13 @@ const History = () => {
     const a = [1, 1, 1, 1];
     return (
         <>
-            <Subheader />
+            <Subheader title='HISTORY' />
             <section className='history container mt-5'>
                 <div className="row">
-                    <div className="col-4 pl-0">
+                    <div className="col-md-3 col-12 pl-md-0">
                         <img width='100%' src="https://www.cuet.ac.bd/frontend/images/history_left.jpg" alt="" />
                     </div>
-                    <div className="col-8 pr-0">
+                    <div className="col-md-9 col-12 pr-md-0 mt-5 mt-md-0">
                         <h2>History</h2>
                         {
                             a.map(() =>

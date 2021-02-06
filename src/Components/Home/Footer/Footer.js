@@ -9,20 +9,20 @@ const Footer = () => {
         <section className='footer'>
             <div className="container">
                 <div className="row py-5">
-                    <div className="col-3">
-                        <img width='50%' src={logo} alt=""/>
+                    <div className="col-md-3 col-12 text-center">
+                        <img width='40%' src={logo} alt=""/>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3 col-6 mt-5 mt-md-0">
                         <h6>Quick links</h6>
                         <p>Admission</p>
                         <p>Forms</p>
                         <p>Result</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3 col-6 mt-5 mt-md-0">
                         <h6>Academic</h6>
                         <p>Notice</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3 col-6 mt-5 mt-md-0">
                         <h6>Contact</h6>
                         <p>exampleemail@gmail.com</p>
                         <p>+88017000000</p>

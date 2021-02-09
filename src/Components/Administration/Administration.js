@@ -5,9 +5,14 @@ import '../../Style/Administration.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import Categories from './Categories/Categories';
+import { useHistory } from 'react-router-dom';
 
 const Administration = () => {
     const a = [1, 1, 1, 1, 1, 1, 1, 1];
+    const history = useHistory()
+    const profile = () => {
+        history.push('/profile')
+    }
     return (
         <>
             <Subheader title='ADMINISTRATION' />
@@ -34,7 +39,7 @@ const Administration = () => {
                                         <td>Md. Moin uddin</td>
                                         <td>Assistant Professor</td>
                                         <td>
-                                            <button className="button py-1 px-2">Profile</button>
+                                            <button onClick={profile} className="button py-1 px-2">Profile</button>
                                         </td>
                                     </tr>
                                 )
@@ -48,7 +53,7 @@ const Administration = () => {
                                         <td>Md. Moin uddin</td>
                                         <td>Assistant Teacher</td>
                                         <td>
-                                            <button className="button py-1 px-2">Profile</button>
+                                            <button onClick={profile} className="button py-1 px-2">Profile</button>
                                         </td>
                                     </tr>
                                 )
@@ -62,7 +67,7 @@ const Administration = () => {
                                         <td>Md. Moin uddin</td>
                                         <td>Teacher</td>
                                         <td>
-                                            <button className="button py-1 px-2">Profile</button>
+                                            <button onClick={profile} className="button py-1 px-2">Profile</button>
                                         </td>
                                     </tr>
                                 )
@@ -74,7 +79,7 @@ const Administration = () => {
                                 <td>Md. Moin uddin</td>
                                 <td>Teacher</td>
                                 <td>
-                                    <button className="button py-1 px-2">Profile</button>
+                                    <button onClick={profile} className="button py-1 px-2">Profile</button>
                                 </td>
                             </tr>
                         </table>
@@ -84,7 +89,7 @@ const Administration = () => {
                                 <td>Md. Moin uddin</td>
                                 <td>Teacher</td>
                                 <td>
-                                    <button className="button py-1 px-2">Profile</button>
+                                    <button onClick={profile} className="button py-1 px-2">Profile</button>
                                 </td>
                             </tr>
                         </table>
@@ -94,7 +99,7 @@ const Administration = () => {
                                 <td>Md. Moin uddin</td>
                                 <td>Teacher</td>
                                 <td>
-                                    <button className="button py-1 px-2">Profile</button>
+                                    <button onClick={profile}className="button py-1 px-2">Profile</button>
                                 </td>
                             </tr>
                         </table>

@@ -2,6 +2,7 @@ import React from 'react';
 import Subheader from '../Subheader/Subheader';
 import '../../Style/Message.scss';
 import Footer from '../Home/Footer/Footer';
+import img from '../../Images/Ali Ashraf2.jpg';
 
 const Message = () => {
     const a = [1,1,1,1];

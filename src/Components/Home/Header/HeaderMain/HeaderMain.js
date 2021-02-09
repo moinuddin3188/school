@@ -1,24 +1,40 @@
-import React from 'react';
-import img from '../../../../Images/1534323249429.jpg';
+import React, { useEffect, useState } from 'react';
+import img from '../../../../Images/banner1.png';
+import img2 from '../../../../Images/banner.png';
+import img3 from '../../../../Images/banner3.png';
+import img4 from '../../../../Images/banner2.png';
 
 const HeaderMain = () => {
+
+    const [sticky, setSticky] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            window.scrollY > 105 ? setSticky(true) : setSticky(false);
+        })
+    }, [])
+
     return (
-        <div style={{marginTop: '112px'}}>
+        <div style={{marginTop: sticky && '54px'}}>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src={img} class="d-block w-100" alt="..." />
                     </div>
                     <div class="carousel-item">
-                        <img src={img} class="d-block w-100" alt="..." />
+                        <img src={img2} class="d-block w-100" alt="..." />
                     </div>
                     <div class="carousel-item">
-                        <img src={img} class="d-block w-100" alt="..." />
+                        <img src={img3} class="d-block w-100" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src={img4} class="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

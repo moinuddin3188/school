@@ -16,11 +16,12 @@ const Categories = () => {
             </div>
             <div className='categories'>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item" onClick={() => getPath('/administration')}>Authority</li>
-                    <li class="list-group-item" onClick={() => getPath('/committee')}>Committee</li>
-                    <li class="list-group-item" onClick={() => getPath('/campus')}>Campus</li>
-                    <li class="list-group-item" onClick={() => getPath('/hostel')}>Hostel</li>
-                    <li class="list-group-item" onClick={() => getPath('/')}>Others list</li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/administration')}>Authority</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/committee')}>Governing body</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/campus')}>Teachers</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/hostel')}>Staff</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/campus')}>Campus</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/')}>Others list</span> </li>
                 </ul>
             </div>
         </div>

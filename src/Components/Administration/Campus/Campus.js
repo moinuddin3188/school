@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 const Campus = () => {
     const a = [
         { title: 'Campus', icon: faMapMarkerAlt, path: '/campus_details'},
-        { title: 'Sports', icon: faCamera, path: '/sports'},
+        { title: 'Sports', icon: faCamera, path: '/sport'},
         { title: 'Hostel', icon: faHotel, path: '/hostel'}
     ]
 

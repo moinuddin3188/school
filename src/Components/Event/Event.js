@@ -1,0 +1,46 @@
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import Footer from '../Home/Footer/Footer';
+import Subheader from '../Subheader/Subheader';
+import '../../Style/Event.scss';
+
+const Event = () => {
+    const a = [1, 1, 1, 1, 1, 1, 1]
+    return (
+        <>
+            <Subheader title={'EVENT'} />
+            <section className='container mt-5'>
+                <div className="row">
+                    <div className='col-md-4 col-12 mb-md-0 mb-4'>
+                        <div className="event-card event">
+                            <div className="cardHeader">
+                                <p>
+                                    <FontAwesomeIcon className='mr-2' icon={faFileAlt} />
+                                    LATEST EVENT
+                                </p>
+                            </div>
+                            <div className="cardBody">
+                                {
+                                    a.map(() =>
+                                        <div className='p-2 sub-card'>
+                                            <p className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, voluptatem......</p>
+                                            <small>13 feb 2021</small>
+                                            <p className='text-danger'><span className='show-details'>Read more...</span></p>
+                                        </div>
+                                    )
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-8">
+                        <img width='100%' src="https://jobs.du.ac.bd/wp-content/uploads/2020/09/Call-for-Abstracts_Webinar-2-25-28-February-2021.jpg" alt="" />
+                    </div>
+                </div>
+            </section>
+            <Footer />
+        </>
+    );
+};
+
+export default Event;

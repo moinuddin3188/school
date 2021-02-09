@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../Home/Footer/Footer';
-import Subheader from '../Subheader/Subheader';
+import Footer from '../../Home/Footer/Footer';
+import Subheader from '../../Subheader/Subheader';
 
 const Hostel = () => {
     return (

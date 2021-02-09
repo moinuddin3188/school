@@ -1,12 +1,19 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import img from '../../../Images/Rihan.png';
 
 const ChoseLink = () => {
+
     const a = [
-        { title: 'About us' },
-        { title: 'Result' },
-        { title: 'Hostel' }
+        { title: 'About us', path: '/message' },
+        { title: 'Result', path: '/result' },
+        { title: 'Hostel', path: '/hostel' }
     ]
+    const history = useHistory()
+    const getPath = path => {
+        history.push(path)
+    }
+
     return (
         <section className="container mt-5">
             <div className="row">
@@ -20,7 +27,7 @@ const ChoseLink = () => {
                                     <p>Lorem ipsum dolor sit amet consec adipis amet consec ipsum dolor sit amet consec.</p>
                                 </div>
                                 <div className='position'>
-                                    <button className="button mt-3 px-3">CLICK HERE</button>
+                                    <button onClick={() => getPath(a.path)} className="button mt-3 px-3">CLICK HERE</button>
                                 </div>
                             </div>
                         </div>

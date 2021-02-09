@@ -1,0 +1,19 @@
+$primary-color: #048277;
+$secondary-color: #5f6d77;
+
+.sport {
+    .title {
+        background-color: $primary-color;
+        padding: 8px;
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+
+    p {
+        color: $secondary-color;
+    }
+}

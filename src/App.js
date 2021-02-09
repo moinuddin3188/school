@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './Style/Style.scss';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Provider } from 'react-redux';
 import Home from './Components/Home/Home';
 import Navbar from './Components/Home/Header/Navbar/Navbar';
 import Message from './Components/Message/Message';
@@ -21,12 +22,28 @@ import PhotoGallery from './Components/Academic/PhotoGallery/PhotoGallery';
 import ClassContact from './Components/Academic/ClassContact/ClassContact';
 import Notice from './Components/Notice/Notice';
 import Contact from './Components/Contact/Contact';
-import Hostel from './Components/Hostel/Hostel';
 import Admission from './Components/Admission/Admission';
-import Sports from './Components/Administration/Campus/Sports/Sports';
 import Profile from './Components/Profile/Profile';
-import { Provider } from 'react-redux';
-import store from './Components/Redux/Store/Store';
+import store from './Redux/Store/Store';
+import Event from './Components/Event/Event';
+import Result from './Components/Result/Result';
+import Dashboard from './Components/Dashboard/Dashboard';
+import AtaGlance from './Components/AtaGlance/AtaGlance';
+import Infrastructure from './Components/Infrastructure/Infrastructure';
+import Achievements from './Components/Achievements/Achievements';
+import AchievementDetails from './Components/Achievements/AchievementDetails/AchievementDetails';
+import AdmissionForm from './Components/Admission/AdmissionForm/AdmissionForm';
+import AdmissionResult from './Components/Admission/AdmissionResult/AdmissionResult';
+import Fees from './Components/Admission/Fees/Fees';
+import Tour from './Components/CoCurriculam/Tour/Tour';
+import Sport from './Components/CoCurriculam/Sport/Sport';
+import DebatingClub from './Components/Facilities/DebatingClub/DebatingClub';
+import ScienceClub from './Components/Facilities/ScienceClub/ScienceClub';
+import CulturalClub from './Components/Facilities/CulturalClub/CulturalClub';
+import Canteen from './Components/Facilities/Canteen/Canteen';
+import Library from './Components/Facilities/Library/Library';
+import Hostel from './Components/Facilities/Hostel/Hostel';
+
 
 function App() {
   return (
@@ -42,6 +59,21 @@ function App() {
         <Route path="/history">
           <History />
         </Route>
+        <Route path="/at-a-glance">
+          <AtaGlance />
+        </Route>
+        <Route path="/infrastructure">
+          <Infrastructure />
+        </Route>
+        <Route path="/achievements">
+          <Achievements />
+        </Route>
+        <Route path="/achievement-details">
+          <AchievementDetails />
+        </Route>
+        <Route path="/result">
+          <Result />
+        </Route>
         <Route path="/administration">
           <Administration />
         </Route>
@@ -53,9 +85,6 @@ function App() {
         </Route>
         <Route path="/campus_details">
           <CampusMain />
-        </Route>
-        <Route path="/sports">
-          <Sports />
         </Route>
         <Route path="/class_home/:class">
           <ClassHome />
@@ -84,17 +113,53 @@ function App() {
         <Route path="/notice">
           <Notice />
         </Route>
+        <Route path="/event">
+          <Event />
+        </Route>
         <Route path="/admission">
           <Admission />
         </Route>
+        <Route path="/admission-form">
+          <AdmissionForm />
+        </Route>
+        <Route path="/admission-result">
+          <AdmissionResult />
+        </Route>
+        <Route path="/admission-fees">
+          <Fees />
+        </Route>
+        <Route path="/tour">
+          <Tour />
+        </Route>
+        <Route path="/sport">
+          <Sport />
+        </Route>
         <Route path="/hostel">
           <Hostel />
+        </Route>
+        <Route path="/debating-club">
+          <DebatingClub />
+        </Route>
+        <Route path="/science-club">
+          <ScienceClub />
+        </Route>
+        <Route path="/cultural-club">
+          <CulturalClub />
+        </Route>
+        <Route path="/canteen">
+          <Canteen />
+        </Route>
+        <Route path="/library">
+          <Library />
         </Route>
         <Route path="/profile">
           <Profile />
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
         </Route>
         <Scroll showBelow={250} />
       </Router>

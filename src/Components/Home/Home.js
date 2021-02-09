@@ -10,7 +10,7 @@ import PrincipalCard from './PrincipalCard/PrincipalCard';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <HeaderMain />
             <div className="container">
                 <div className="row">
@@ -23,7 +23,7 @@ const Home = () => {
             <ChoseLink />
             <Gallery />
             <Footer />
-        </div>
+        </>
     );
 };
 

@@ -2,16 +2,15 @@ import React from 'react';
 import Footer from '../Home/Footer/Footer';
 import Subheader from '../Subheader/Subheader';
 import '../../Style/Profile.scss';
-import { NavLink } from 'react-router-dom';
 import Education from './Education/Education';
 import Experience from './Experience/Experience';
-import { setProfile } from '../Redux/Profile/ProfileAction/ProfileAction';
 import { connect } from 'react-redux';
 import CV from './CV/CV';
+import img from '../../Images/Ali Ashraf2.jpg';
+import { setProfile } from '../../Redux/Profile/ProfileAction/ProfileAction';
 
 
 const Profile = ({ profile, setProfile }) => {
-    console.log(profile)
     return (
         <>
             <Subheader title='PROFILE' />
@@ -21,7 +20,7 @@ const Profile = ({ profile, setProfile }) => {
                         <div className='profile-of mb-4'>
                             <p>Profile</p>
                         </div>
-                        <img width='200px' src="https://www.cuet.ac.bd/frontend/images/vcsir.jpg" alt="" />
+                        <img width='200px' src={img} alt="" />
                     </div>
                     <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0">
                         <div className="profile-of">
@@ -34,14 +33,29 @@ const Profile = ({ profile, setProfile }) => {
                             <p>Phone: +880170000000</p>
                             <div className='my-4'>
                                 <ul class="list-group list-group-horizontal">
-                                    <li onClick={() => setProfile('education')} class="list-group-item">Education</li>
-                                    <li onClick={() => setProfile('experience')} class="list-group-item">Experience</li>
-                                    <li onClick={() => setProfile('cv')} class="list-group-item">CV</li>
+                                    <li
+                                        onClick={() => setProfile('education')}
+                                        className={profile === 'education' ? "list-group-item active" : "list-group-item"}
+                                    >
+                                        Education
+                                    </li>
+                                    <li
+                                        onClick={() => setProfile('experience')}
+                                        className={profile === 'experience' ? "list-group-item active" : "list-group-item"}
+                                    >
+                                        Experience
+                                    </li>
+                                    <li
+                                        onClick={() => setProfile('cv')}
+                                        className={profile === 'cv' ? "list-group-item active" : "list-group-item"}
+                                    >
+                                        CV
+                                    </li>
                                 </ul>
                             </div>
-                            { profile === 'education' && <Education /> }
-                            { profile === 'experience' && <Experience /> }
-                            { profile === 'cv' && <CV /> }
+                            {profile === 'education' && <Education />}
+                            {profile === 'experience' && <Experience />}
+                            {profile === 'cv' && <CV />}
                         </div>
                     </div>
                 </div>

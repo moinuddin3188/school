@@ -1,0 +1,64 @@
+$primary-color: #048277;
+$secondary-color: #5f6d77;
+
+.admission-menu {
+    li {
+        font-size: 14px;
+        background: transparent;
+        color: $secondary-color;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    li:hover {
+        color: orangered;
+    }
+}
+
+.description {
+    color: $secondary-color;
+    font-size: 15px;
+}
+
+.admission-form, .admission-result, .admission-fees {
+    .admission-menu-title, .title {
+        background-color: $primary-color;
+        padding: 8px;
+    
+        p {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+    
+    .admission-form-section, .admission-result-section, .admission-fees-section {
+        padding: 30px;
+        border-left: 7px solid $primary-color;
+        box-shadow: 4px 4px 10px #c0c0c0;
+        cursor: pointer;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+
+        .icon {
+            border: 1px solid $secondary-color;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .admission-form-section:hover, .admission-result-section:hover, .admission-fees-section:hover {
+        border-left: 7px solid #ff4086;
+        box-shadow: none;
+
+        .icon {
+            color: #fff;
+            background-color: #ff4086;
+            border: none;
+        }
+    }
+}

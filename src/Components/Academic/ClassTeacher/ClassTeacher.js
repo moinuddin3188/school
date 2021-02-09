@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../../Home/Footer/Footer';
 import Subheader from '../../Subheader/Subheader';
 import Menu from '../Menu/Menu';
+import img from '../../../Images/Ali Ashraf2.jpg';
 
 const ClassTeacher = () => {
     return (
@@ -11,8 +12,8 @@ const ClassTeacher = () => {
                 <div className="row">
                     <Menu />
                     <div className="col-lg-9 col-12 pr-lg-0 mt-5 mt-lg-0 class-teacher">
-                        <img width='200px' src="https://www.cuet.ac.bd/frontend/images/vcsir.jpg" alt=""/>
-                        <h5>Md. Someone</h5>
+                        <img width='200px' src={img} alt=""/>
+                        <h5>Md. Ali Ashraf</h5>
                         <p>Assistant Teacher</p>
                         <p>+88017000000</p>
                         <p>Email: example@gmail.com</p>

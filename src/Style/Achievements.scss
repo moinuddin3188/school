@@ -1,0 +1,88 @@
+$primary-color: #048277;
+$secondary-color: #5f6d77;
+
+.achievements {
+    .title {
+        background-color: $primary-color;
+        padding: 8px;
+        margin: 0 -9px;
+
+        p {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+
+    .card {
+        .card-title {
+            font-size: 17px;
+            color: #006961;
+        }
+        p {
+            font-size: 14px;
+            color: $secondary-color;
+        }
+    }
+}
+
+.achievement-details {
+    .achievement-details-card {
+        border-radius: 5px;
+        border: 1px solid $primary-color;
+
+        .cardHeader {
+            background-color: $primary-color;
+            color: #fff;
+            padding: 8px 13px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .sub-card {
+            border-bottom: 1px dotted rgb(0, 0, 0);
+
+        p {
+            font-size: 14px;
+        }
+
+        small {
+            font-size: 12px;
+        }
+
+        .show-details {
+            cursor: pointer;
+        }
+    }
+
+    .sub-card:last-child {
+        border: none;
+    }
+        .cardBody {
+            height: 447px;
+            overflow-y: scroll;
+        }
+    
+        .show-details {
+            cursor: pointer;
+        }
+    }
+
+    .title {
+        background-color: $primary-color;
+        padding: 8px;
+
+        p {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .description {
+        color: $secondary-color;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}

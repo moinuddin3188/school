@@ -1,0 +1,29 @@
+$primary-color: #079992;
+$secondary-color: #38ada9;
+
+.dashboard {
+
+    .sidebar {
+        height: 700px;
+        background-image: linear-gradient($primary-color, $secondary-color);
+        color: #fff;
+
+        a {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+
+            .icon {
+                margin-right: 10px;
+            }
+        }
+        
+        a:hover {
+            color: #fa983a;
+        }
+    }
+}
+
+

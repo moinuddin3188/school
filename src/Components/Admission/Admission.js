@@ -8,7 +8,7 @@ const Admission = () => {
     return (
         <>
             <Subheader title='ADMISSION' />
-            <section className='container mt-5'>
+            <section className='container mt-5 admission-circular'>
                 <div className="row">
                     <Categories />
                     <div className="col-md-9 col-12 pr-md-0 mt-4 mt-md-0">

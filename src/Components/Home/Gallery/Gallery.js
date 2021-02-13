@@ -50,6 +50,9 @@ const Gallery = () => {
                     <img width='100%' src={last} alt="" />
                 </div>
             </div>
+            <div className="text-center">
+                <button className="button px-4 mt-4">See more</button>
+            </div>
         </section>
     );
 };

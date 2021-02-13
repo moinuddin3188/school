@@ -3,16 +3,31 @@ import Footer from '../Home/Footer/Footer';
 import Subheader from '../Subheader/Subheader';
 import '../../Style/Administration.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleRight, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import Categories from './Categories/Categories';
 import { useHistory } from 'react-router-dom';
+import img from '../../Images/AliAshraf.jpg';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { currentProfile } from '../../Redux/CurrentProfile/CurrentProfileAction';
 
-const Administration = () => {
-    const a = [1, 1, 1, 1, 1, 1, 1, 1];
+const Administration = ({ setCurrentProfile }) => {
+
+    const [principals, setPrincipals] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/principalsAndVicePrincipals')
+            .then(res => res.json())
+            .then(data => setPrincipals(data))
+    })
+
     const history = useHistory()
-    const profile = () => {
+    const profile = profile => {
+        setCurrentProfile(profile)
         history.push('/profile')
     }
+
     return (
         <>
             <Subheader title='ADMINISTRATION' />
@@ -24,85 +39,44 @@ const Administration = () => {
                             <span style={{ fontWeight: "300" }}>Administration and </span>
                             <span style={{ fontWeight: "600" }}>Authority</span>
                         </h2>
-                        <p className='mt-5 title'>Principal:</p>
-                        <p>Mr. Md. Kabir Ahmed</p>
-                        <p>Email: example@gmail.com</p>
-                        <p className='mt-4 title'>Vice-Principal</p>
-                        <p>Md. Someone</p>
-                        <p>Email: example@gmail.com</p>
-                        <p className='mt-5 title'>Teachers</p>
-                        <p className='mt-4 title'><FontAwesomeIcon className='mr-3' icon={faAngleDoubleRight} /> Alim</p>
-                        <table>
+                        <div className="row">
                             {
-                                a.map(() =>
-                                    <tr>
-                                        <td>Md. Moin uddin</td>
-                                        <td>Assistant Professor</td>
-                                        <td>
-                                            <button onClick={profile} className="button py-1 px-2">Profile</button>
-                                        </td>
-                                    </tr>
+                                principals.map(principal =>
+                                    <div className='col-6 mt-4'>
+                                        <img width='150px' src={principal.picture.large} alt="" />
+                                        <p className='mt-2 title'>
+                                            {principal.section === 'principal-collage' && 'Principal (Collage)'}
+                                            {principal.section === 'principal-school' && 'Principal (school)'}
+                                            {principal.section === 'vice-principal-collage' && 'vice-principal (Collage)'}
+                                            {principal.section === 'vice-principal-school' && 'vice-principal (School)'}
+                                        </p>
+                                        <p>{`${principal.name.title} ${principal.name.first} ${principal.name.last}`}</p>
+                                        <p>Phone: {principal.phone}</p>
+                                        <p>Email: {principal.email}</p>
+                                        <button onClick={() => profile(principal)} className="button px-4">Profile</button>
+                                    </div>
                                 )
                             }
-                        </table>
-                        <p className='mt-4 title'><FontAwesomeIcon className='mr-3' icon={faAngleDoubleRight} /> Dakhil</p>
-                        <table>
-                            {
-                                a.map(() =>
-                                    <tr>
-                                        <td>Md. Moin uddin</td>
-                                        <td>Assistant Teacher</td>
-                                        <td>
-                                            <button onClick={profile} className="button py-1 px-2">Profile</button>
-                                        </td>
-                                    </tr>
-                                )
-                            }
-                        </table>
-                        <p className='mt-4 title'><FontAwesomeIcon className='mr-3' icon={faAngleDoubleRight} /> Ibtedaye</p>
-                        <table>
-                            {
-                                a.map(() =>
-                                    <tr>
-                                        <td>Md. Moin uddin</td>
-                                        <td>Teacher</td>
-                                        <td>
-                                            <button onClick={profile} className="button py-1 px-2">Profile</button>
-                                        </td>
-                                    </tr>
-                                )
-                            }
-                        </table>
-                        <p className="mt-4 title"><FontAwesomeIcon className='mr-3' icon={faAngleDoubleRight} /> Librarian</p>
-                        <table>
-                            <tr>
-                                <td>Md. Moin uddin</td>
-                                <td>Teacher</td>
-                                <td>
-                                    <button onClick={profile} className="button py-1 px-2">Profile</button>
-                                </td>
-                            </tr>
-                        </table>
-                        <p className="mt-4 title"><FontAwesomeIcon className='mr-3' icon={faAngleDoubleRight} /> Register</p>
-                        <table>
-                            <tr>
-                                <td>Md. Moin uddin</td>
-                                <td>Teacher</td>
-                                <td>
-                                    <button onClick={profile} className="button py-1 px-2">Profile</button>
-                                </td>
-                            </tr>
-                        </table>
-                        <p className="mt-4 title"><FontAwesomeIcon className='mr-3' icon={faAngleDoubleRight} /> Security</p>
-                        <table>
-                            <tr>
-                                <td>Md. Moin uddin</td>
-                                <td>Teacher</td>
-                                <td>
-                                    <button onClick={profile}className="button py-1 px-2">Profile</button>
-                                </td>
-                            </tr>
-                        </table>
+                        </div>
+                        <div className="row">
+                            <div className='col-6 mt-4'>
+                                <img width='150px' src={img} alt="" />
+                                <p className='mt-2 title'>Chairman</p>
+                                <p>Governing body</p>
+                                <p>Mr. Md. Kabir Ahmed</p>
+                                <p>Phone: 0170000000</p>
+                                <p>Email: example@gmail.com</p>
+                            </div>
+                            <div className='col-6 mt-4'>
+                                <img width='150px' src={img} alt="" />
+                                <p className='mt-2 title'>Vice-Precedent</p>
+                                <p>Governing body</p>
+                                <p>Md. Someone</p>
+                                <p>Phone: 0170000000</p>
+                                <p>Email: example@gmail.com</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -111,4 +85,13 @@ const Administration = () => {
     );
 };
 
-export default Administration;
+const mapDispatchToProps = dispatch => {
+    return {
+        setCurrentProfile: (profile) => dispatch(currentProfile(profile))
+    }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(Administration);

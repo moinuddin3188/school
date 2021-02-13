@@ -2,6 +2,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { fakeData } from '../../../../FakeData/FakeData';
 import logo from '../../../../Images/services1.png';
 
 const Navbar = () => {
@@ -17,6 +18,28 @@ const Navbar = () => {
     const history = useHistory();
     const goHome = () => {
         history.push('/')
+    }
+
+    const handleAddAdmin = () => {
+        fetch('http://localhost:5000/add', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(fakeData)
+        })
+            .then(res => res.json())
+            .then(res => {
+                
+            })
+    }
+
+    const handleDelete = () => {
+        fetch('http://localhost:5000/delete', {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(res => {
+                
+            })
     }
 
     return (
@@ -77,15 +100,17 @@ const Navbar = () => {
                                             Academic
                                         </a>
                                         <div class="dropdown-menu p-3 p-lg-0" aria-labelledby="dropdownMenuButton">
-                                            <Link class="dropdown-item" to="/class_home/fazil">Fazil</Link>
-                                            <Link class="dropdown-item" to="/class_home/alim_2nd">Alim 1st Year</Link>
-                                            <Link class="dropdown-item" to="/class_home/alim_1st">Alim 2nd Year</Link>
-                                            <Link class="dropdown-item" to="/class_home/dakhil">Dakhil</Link>
+                                            <Link class="dropdown-item" to="/syllabus-all">Syllabus</Link>
+                                            <Link class="dropdown-item" to="/exam-routine">Exam Routine</Link>
+                                            <Link class="dropdown-item" to="/public-result">Public Result</Link>
+                                            <Link class="dropdown-item" to="/academic-result">Academic Result</Link>
+                                            <Link class="dropdown-item" to="/class_home/alim_2nd">Class XII</Link>
+                                            <Link class="dropdown-item" to="/class_home/alim_1st">Class XI</Link>
+                                            <Link class="dropdown-item" to="/class_home/dakhil">Class 10</Link>
                                             <Link class="dropdown-item" to="/class_home/class_9">Class 9</Link>
                                             <Link class="dropdown-item" to="/class_home/class_8">Class 8</Link>
                                             <Link class="dropdown-item" to="/class_home/class_7">Class 7</Link>
                                             <Link class="dropdown-item" to="/class_home/class_6">Class 6</Link>
-                                            <Link class="dropdown-item" to="/class_home/class_5">Class 5</Link>
                                         </div>
                                     </div>
                                 </li>
@@ -112,7 +137,7 @@ const Navbar = () => {
                                             Facilities
                                         </a>
                                         <div class="dropdown-menu p-3 p-lg-0">
-                                            <Link class="dropdown-item" to="/message">Hostel</Link>
+                                            <Link class="dropdown-item" to="/hostel">Hostel</Link>
                                             <Link class="dropdown-item" to="/debating-club">Debating club</Link>
                                             <Link class="dropdown-item" to="/science-club">Science club</Link>
                                             <Link class="dropdown-item" to="/cultural-club">Cultural club</Link>
@@ -125,7 +150,7 @@ const Navbar = () => {
                                     <Link class="nav-link px-4" to="/contact">Contact</Link>
                                 </li>
                                 <li class="nav-item pl-auto">
-                                    <Link class="nav-link login-btn-container px-4" to="/login"><small className='login-btn'>Login</small></Link>
+                                    <Link onClick={handleAddAdmin} class="nav-link login-btn-container px-4" to="/login"><small className='login-btn'>Login</small></Link>
                                 </li>
                             </ul>
                         </div>

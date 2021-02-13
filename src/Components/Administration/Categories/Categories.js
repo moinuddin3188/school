@@ -18,8 +18,8 @@ const Categories = () => {
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"> <span onClick={() => getPath('/administration')}>Authority</span> </li>
                     <li class="list-group-item"> <span onClick={() => getPath('/committee')}>Governing body</span> </li>
-                    <li class="list-group-item"> <span onClick={() => getPath('/campus')}>Teachers</span> </li>
-                    <li class="list-group-item"> <span onClick={() => getPath('/hostel')}>Staff</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/teachers')}>Teachers</span> </li>
+                    <li class="list-group-item"> <span onClick={() => getPath('/staff')}>Staff</span> </li>
                     <li class="list-group-item"> <span onClick={() => getPath('/campus')}>Campus</span> </li>
                     <li class="list-group-item"> <span onClick={() => getPath('/')}>Others list</span> </li>
                 </ul>

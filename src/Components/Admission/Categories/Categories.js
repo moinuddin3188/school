@@ -11,7 +11,7 @@ const Categories = () => {
 
     return (
         <div className='col-md-3 col-12 pl-md-0'>
-            <img width='100%' src="https://www.cuet.ac.bd/frontend/images/administ.jpg" alt="" />
+            <img width='100%' src="https://www.stxavierscmipublicschool.com/wp-content/uploads/2020/05/unnamed.png" alt="" />
             <div className="admission-menu-title mt-4">
                 <p>Admission</p>
             </div>

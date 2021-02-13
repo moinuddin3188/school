@@ -77,6 +77,29 @@ $secondary-color: #5f6d77;
         }
     }
 
+    .syllabus-section, .exam-routine-section, .academic-result-section {
+        padding: 30px;
+        border-top: 7px solid $primary-color;
+        box-shadow: 4px 4px 10px #c8c8c8;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .syllabus-section:hover, .exam-routine-section:hover, .academic-result-section:hover {
+        border-top-color: #ff4086;
+        box-shadow: inherit;
+        background-color: #e7e7e7;
+    }
+
+    caption {
+        caption-side: top;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: Black;
+    }
+
     p {
         color: $secondary-color;
         font-size: 14px;

@@ -43,6 +43,14 @@ import CulturalClub from './Components/Facilities/CulturalClub/CulturalClub';
 import Canteen from './Components/Facilities/Canteen/Canteen';
 import Library from './Components/Facilities/Library/Library';
 import Hostel from './Components/Facilities/Hostel/Hostel';
+import Teachers from './Components/Administration/Teachers/Teachers';
+import TeachersSchool from './Components/Administration/Teachers/TeachersSchool/TeachersSchool';
+import TeachersCollage from './Components/Administration/Teachers/TeachersCollage/TeachersCollage';
+import Staff from './Components/Administration/Staff/Staff';
+import SyllabusRoot from './Components/Academic/SyllabusRoot/SyllabusRoot';
+import ExamRoutine from './Components/Academic/ExamRoutine/ExamRoutine';
+import PublicResult from './Components/Academic/PublicResult/PublicResult';
+import AcademicResult from './Components/Academic/AcademicResult/AcademicResult';
 
 
 function App() {
@@ -80,11 +88,35 @@ function App() {
         <Route path="/committee">
           <Committee />
         </Route>
+        <Route path="/teachers">
+          <Teachers />
+        </Route>
+        <Route path="/teachers-school">
+          <TeachersSchool />
+        </Route>
+        <Route path="/teachers-collage">
+          <TeachersCollage />
+        </Route>
+        <Route path="/staff">
+          <Staff />
+        </Route>
         <Route path="/campus">
           <Campus />
         </Route>
         <Route path="/campus_details">
           <CampusMain />
+        </Route>
+        <Route path="/syllabus-all">
+          <SyllabusRoot />
+        </Route>
+        <Route path="/exam-routine">
+          <ExamRoutine />
+        </Route>
+        <Route path="/public-result">
+          <PublicResult />
+        </Route>
+        <Route path="/academic-result">
+          <AcademicResult />
         </Route>
         <Route path="/class_home/:class">
           <ClassHome />

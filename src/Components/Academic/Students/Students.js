@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { fakeData } from '../../../FakeData/FakeData';
 import Footer from '../../Home/Footer/Footer';
 import Subheader from '../../Subheader/Subheader';
 import Menu from '../Menu/Menu';
 
 const Students = () => {
-    const a = [1, 1, 1, 1, 1, 1, 1, 1];
-    const number = max => {
-        return Math.floor(Math.random() * Math.floor(max));
-    }
+    
+    const [students, setStudents] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/student')
+        .then(res => res.json())
+        .then(data => setStudents(data))
+    })
+
     return (
         <>
             <Subheader title='STUDENTS' />
@@ -34,17 +39,17 @@ const Students = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        fakeData.map((a, index) =>
+                                        students.map((student, index) =>
                                             <tr>
                                                 <td>{index + 1}</td>
                                                 <td>
-                                                    <img width='80px' src={a.node.searchable.profile_picture.uri} alt="" />
+                                                    <img width='80px' src={student.picture.large} alt="" />
                                                 </td>
-                                                <td>{a.node.searchable.name}</td>
-                                                <td>{number(60)}</td>
-                                                <td>{number(60)}</td>
-                                                <td>+088170000000</td>
-                                                <td>Jagannathpur, Debidwar, Cumilla</td>
+                                                <td>{`${student.name.first} ${student.name.last}`}</td>
+                                                <td>{student.dob.age}</td>
+                                                <td>{student.registered.age}</td>
+                                                <td>{student.phone}</td>
+                                                <td>{`${student.location.street.name}, ${student.location.city} ${student.location.state}`}</td>
                                             </tr>
                                         )
                                     }
